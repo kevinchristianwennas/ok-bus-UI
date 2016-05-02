@@ -1,0 +1,208 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+         <!-- for ios 7 style, multi-resolution icon of 152x152 --> 
+         <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent"> <link rel="apple-touch-icon" href="img/okbus-icon.png"> 
+         <!-- for Chrome on Android, multi-resolution icon of 196x196 --> 
+         <meta name="mobile-web-app-capable" content="yes"> <link rel="shortcut icon" sizes="196x196" href="img/okbus-icon.png">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" type="text/css" href="css/okbus.css">
+
+        <title>Ok-Bus</title>
+    </head>
+
+    <body>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="/okbus/app-index.html" class="brand-logo center"><img src="img/logo.png" class="responsive-img"></a>
+                    <ul id="slide-out" class="side-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Pesan Bus</a></li>
+                        <div class="divider"></div>
+                        <li><a href="#">Tentang</a></li>
+                        <li><a href="#">Layanan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <div class="divider"></div>
+                        <li><a href="signup.html">Logout</a></li>
+                    </ul>
+                    <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons menusamping">menu</i></a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container containerapp">
+            <div class="row app">
+
+                <!-- LEFT WILL BE DISSAPEAR IN MOBILE -->
+                <div class="leftok col m4 s12">
+
+                    <div class="row profile">
+                        <div class="col s12">
+                            <div class="row identitas">
+                                <img src="img/Go.jpg" class="responsive-img">
+                                <span>Gohan Parningotan</span>
+
+                            </div>
+
+                            <div class="row status">
+                                <div class="pemesanan col s12">
+                                    <img src="img/pemesanan.png">
+                                    <span>2 pesanan aktif</span>
+                                </div>
+                                <div class="penawaran col s12">
+                                    <img src="img/penawaran.png">
+                                    <span>10 penawaran baru
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pesanbus">
+                        <div class="col s12">
+                            <a class="waves-effect waves-light btn blueok" href="app-pesanbus.html">Pesan Bus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT THE ONLY PART DISPLAYED IN MOBILE -->
+                <div class="rightok col m8 s12">
+                    <div class="row content detailpemesanan">
+                        <h3>Detail Pemesanan</h3>
+                        <div class="row topbutton">
+                            <div class="col m4 s4">
+                                <div class="status-label row">
+                                    <p class="labelred left">paid</p>
+                                </div>
+                            </div>
+                            <div class="col m8 s8 actionpemesanan">
+                                <div class="right">
+                                    <a class="waves-effect waves-light blueok btn buttondaftarpenawaran">
+                                        10 Penawaran</a>
+                                    <a class="waves-effect waves-light blueok btn buttoncancel">
+                                        Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="row datapemesanan">
+                            <div class="col 12">
+                                <div>
+                                    <p class="texttitle">Tipe</p>
+                                    <p>Pulang-pergi</p>
+                                </div>
+                                <div class="divider"></div>
+                                <div>
+                                    <p class="texttitle">Bus</p>
+                                    <p>1. Bus 50 seats (1)</p>
+                                    <p>2. Bus 35 seats (2)</p>
+                                </div>
+                                <div class="divider"></div>
+                                <div>
+                                    <p class="texttitle">Alamat</p>
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col s2">
+                                                <p>Dari</p>
+                                            </div>
+                                            <div class="col s10">
+                                                <p>Jalan H. Misan No. 53 RT 09 RW 09 Pasir Gunung Selatan, Cimanggis, Depok</p>
+                                                <p class="minitext">Rumah kedua setelah masjid</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col s2">
+                                                <p>Ke</p>
+                                            </div>
+                                            <div class="col s10">
+                                                <p>Fakultas Ilmu Komputer UI, Depok</p>
+                                                <p class="minitext">Di parkiran saja</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+                                <div>
+                                    <p class="texttitle">Waktu</p>
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col s2">
+                                                <p>Pergi</p>
+                                            </div>
+                                            <div class="col s10">
+                                                <p>13 Maret 2016 16:00</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col s2">
+                                                <p>Pulang</p>
+                                            </div>
+                                            <div class="col s10">
+                                                <p>14 Maret 2016 13:00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+
+                                <div>
+                                    <p class="texttitle">Biaya</p>
+                                    <div class="row">
+                                        <table class="striped">
+                                            <thead>
+                                              <tr>
+                                                  <th data-field="id">Bus</th>
+                                                  <th data-field="name">Jumlah</th>
+                                                  <th data-field="price">Harga</th>
+                                              </tr>
+                                            </thead>
+
+                                            <tbody>
+                                              <tr>
+                                                <td>Bus 50 seats</td>
+                                                <td>1</td>
+                                                <td>Rp2.000.000</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Bus 35 seats</td>
+                                                <td>2</td>
+                                                <td>Rp3.200.000</td>
+                                              </tr>
+                                              
+                                              <tr>
+                                                  <td colspan="2"><b>Total</b></td>
+                                                  <td>Rp5.200.000</td>
+                                              </tr>
+
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+        <script type="text/javascript" src="js/okbus.js"></script>
+    </body>
+  </html>

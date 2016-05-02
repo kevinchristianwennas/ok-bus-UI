@@ -1,0 +1,308 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+         <!-- for ios 7 style, multi-resolution icon of 152x152 --> 
+         <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent"> <link rel="apple-touch-icon" href="img/okbus-icon.png"> 
+         <!-- for Chrome on Android, multi-resolution icon of 196x196 --> 
+         <meta name="mobile-web-app-capable" content="yes"> <link rel="shortcut icon" sizes="196x196" href="img/okbus-icon.png">
+         
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" type="text/css" href="css/okbus.css">
+
+        <title>Ok-Bus</title>
+    </head>
+
+    <body>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="/okbus/app-index.html" class="brand-logo center"><img src="img/logo.png" class="responsive-img"></a>
+                    <ul id="slide-out" class="side-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Pesan Bus</a></li>
+                        <div class="divider"></div>
+                        <li><a href="#">Tentang</a></li>
+                        <li><a href="#">Layanan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <div class="divider"></div>
+                        <li><a href="signup.html">Logout</a></li>
+                    </ul>
+                    <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons menusamping">menu</i></a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container containerapp">
+            <div class="row app">
+
+                <!-- LEFT WILL BE DISSAPEAR IN MOBILE -->
+                <div class="leftok col m4 s12">
+
+                    <div class="row profile">
+                        <div class="col s12">
+                            <div class="row identitas">
+                                <img src="img/Go.jpg" class="responsive-img">
+                                <span>Gohan Parningotan</span>
+
+                            </div>
+
+                            <div class="row status">
+                                <div class="pemesanan col s12">
+                                    <img src="img/pemesanan.png">
+                                    <span>2 pesanan aktif</span>
+                                </div>
+                                <div class="penawaran col s12">
+                                    <img src="img/penawaran.png">
+                                    <span>10 penawaran baru
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pesanbus">
+                        <div class="col s12">
+                            <a class="waves-effect waves-light btn blueok" href="app-pesanbus.html">Pesan Bus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT THE ONLY PART DISPLAYED IN MOBILE -->
+                <div class="rightok col m8 s12">
+                    <div class="row content pemesananbus">
+                        <div class="row">
+                            <h4>Pemesanan Bus</h4>
+                            <form action="app-index.html" method="post" class="formpemesanan">
+                                <div class="row">
+                                    <p class="subtitle-form">Tipe Pemesanan</p>
+                                    <div class="input-field col m4 s6">
+                                        <input class="with-gap" name="tipe" type="radio" id="sekalijalan" />
+                                        <label for="sekalijalan">Sekali jalan</label>
+                                    </div>
+                                    <div class="input-field col m4 s6">
+                                        <input class="with-gap" name="tipe" type="radio" id="pulangpergi" />
+                                        <label for="pulangpergi">Pulang-pergi</label>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+                                <div class="row">
+                                    <p class="subtitle-form">Dari</p>
+                                    <div class="input-field s12">
+                                        <i class="material-icons prefix">location_on</i>
+                                        <input id="lokasidari" type="text" class="validate">
+                                        <label for="lokasidari">Lokasi</label>
+                                    </div>
+                                    <div class="input-field s12">
+                                        <i class="material-icons prefix">forum</i>
+                                        <input id="detaildari" type="text" class="validate">
+                                        <label for="detaildari">Detail</label>
+                                        <p class="input-note">House no./Floor/Landmark</p>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+                                <div class="row">
+                                    <p class="subtitle-form">Ke</p>
+                                    <div class="input-field s12">
+                                        <i class="material-icons prefix">location_on</i>
+                                        <input id="lokasike" type="text" class="validate">
+                                        <label for="lokasike">Lokasi</label>
+                                    </div>
+                                    <div class="input-field s12">
+                                        <i class="material-icons prefix">forum</i>
+                                        <input id="detailke" type="text" class="validate">
+                                        <label for="detailke">Detail</label>
+                                        <p class="input-note">House no./Floor/Landmark</p>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+                                <div class="row">
+                                    <p class="subtitle-form">Waktu</p>
+                                    <div class="input-field s12">
+                                        <i class="material-icons prefix">today</i>
+                                        <input type="datetime" placeholder="Pergi" class="datepicker">
+                                    </div>
+                                    <div class="input-field s12">
+                                        <i class="material-icons prefix">alarm_on</i>
+                                        <input type="time" placeholder="Jam pergi">
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="input-field s12">
+                                        <i class="material-icons prefix">today</i>
+                                        <input type="datetime" placeholder="Pulang" class="datepicker">
+                                    </div>
+                                    <div class="input-field s12">
+                                        <i class="material-icons prefix">alarm_on</i>
+                                        <input type="time" placeholder="Jam pulang">
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+                                <div class="row bus-list">
+                                    <div class="row bus-pesanan-header">
+                                        <div class="col s6 title">
+                                            <p class="subtitle-form">Bus</p>
+                                        </div>
+                                        <div class="col s6">
+                                            <a class="waves-effect waves-light btn blueok tambahbus" id="addbus">Tambah Bus</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="divider"></div>
+                                    <div class="bus-item">
+                                        <a href="#" class="deletebus">+</a>
+                                            <div class="input-field s12">
+                                                <!-- ketika dipilih keluar modal untuk memilih kategori bus -->
+                                                <i class="material-icons prefix">shopping_cart</i>
+                                                <input type="hidden" value="" name="tipebus[]">
+                                                <div class="pilihbus">
+                                                    <p>Tekan tombol pilih bus.</p>
+                                                    <button data-target="modalbus" class="btn modal-trigger blueok">Pilih Bus</button>
+                                                </div>
+                                            </div>
+                                            <div class="input-field s12">
+                                                <!-- ketika dipilih keluar modal untuk memilih fasilitas yang diinginkan -->
+                                                <i class="material-icons prefix">comment</i>
+                                                <div class="pilihfasilitas">
+                                                    <p>Tekan tombol pilih fasilitas.</p>
+                                                    <button data-target="modalfasilitas" class="btn modal-trigger blueok">Pilih Fasilitas</button>
+                                                </div>
+
+                                            </div>
+                                            <div class="jumlahdanbudget">
+                                                <div class="input-field s12">
+                                                    <i class="material-icons prefix">shopping_cart</i>
+                                                    <input type="number" class="validate" name="jumlahbus[]">
+                                                    <label>Jumlah Bus</label>
+                                                </div>
+                                                <div class="input-field s12">
+                                                    <i class="material-icons prefix">work</i>
+                                                    <input type="number" class="validate" name="budgetbus[]">
+                                                    <label>Budget</label>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                </div>
+
+                                <div class="row submit-formpesan">
+                                    <button class="btn waves-effect waves-light btn-large blueok" type="submit" name="action">Pesan
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+                        <!-- Modal Pilihan Bus -->
+                                                <div id="modalbus" class="modal">
+                                                    <div class="modal-content">
+                                                        <div class="row">
+                                                            <div class="col s12">
+                                                                <div class="row">
+                                                                    <div class="col m3 s6 gambarbus">
+                                                                        <img src="img/bus/59seats.jpg" class="responsive-img">
+                                                                    </div>
+                                                                    <div class="col m9 s6 namabus">
+                                                                        <p>Bus 59 seats</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col m3 s6 gambarbus">
+                                                                        <img src="img/bus/48seats.jpg" class="responsive-img">
+                                                                    </div>
+                                                                    <div class="col m9 s6 namabus">
+                                                                        <p>Bus 48 seats</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col m3 s6 gambarbus">
+                                                                        <img src="img/bus/35seats.jpg" class="responsive-img">
+                                                                    </div>
+                                                                    <div class="col m9 s6 namabus">
+                                                                        <p>Bus 35 seats</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col m3 s6 gambarbus">
+                                                                        <img src="img/bus/elf18seats.jpg" class="responsive-img">
+                                                                    </div>
+                                                                    <div class="col m9 s6  namabus">
+                                                                        <p>Mini Elf 18 seats</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col m3 s6 gambarbus">
+                                                                        <img src="img/bus/hiace.jpg" class="responsive-img">
+                                                                    </div>
+                                                                    <div class="col m9 s6 namabus">
+                                                                        <p>Bus panjang 10 seats</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+        <!-- Modal Pilihan Fasilitas -->
+        <div id="modalfasilitas" class="modal">
+            <div class="modal-content">
+                <div>
+                    <h5>Daftar Fasilitas</h5>
+                    <form action="" method="post" class="formfasilitas">
+                        <p>
+                            <input type="checkbox" class="filled-in" id="ac"/>
+                            <label for="ac">AC</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" id="stopkontak" />
+                            <label for="stopkontak">Stop kontak</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" id="uangtol"/>
+                            <label for="uangtol">Uang tol</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" id="kamarmandi" />
+                            <label for="kamarmandi">Kamar mandi</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" id="tv" />
+                            <label for="tv">TV</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" id="dvd" />
+                            <label for="dvd">DVD</label>
+                        </p>
+                    </form>                                 
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Pilih</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+        <script type="text/javascript" src="js/okbus.js"></script>
+    </body>
+  </html>

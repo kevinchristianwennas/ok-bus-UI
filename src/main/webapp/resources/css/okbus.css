@@ -1,0 +1,449 @@
+@import url('font.css');
+@import url('form-custom-color.css');
+
+body{
+    font-family: Titillium;
+}
+/* OKBUS CSS*/
+h3{
+    font-size : 34px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.blueok{
+    background-color: #06b9f1;
+}
+.blueok:hover, .blueok:active{
+    background-color: #06b9f1;
+}
+h5{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.home .section{
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.home .main{
+    height: 450px;
+    text-align: center;
+    display: table;
+}
+.home .main .main-text{
+    display: table-cell;
+    vertical-align: middle;
+}
+.section h3{
+    text-align: center;
+}
+.section img{
+    border-radius: 50%;
+}
+.brand-logo img{
+    width: 120px;
+    padding-top: 10px;
+}
+nav{
+    background-color: #fff;
+}
+nav .menusamping{
+    background-color: #06b9f1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+nav li a{
+    color: #000;
+}
+#dropdownmasuk li a{
+    color : #000;
+}
+footer.page-footer{
+    background-color: #fff;
+    color: #222;
+    border-top: 1px solid #cccccc;
+}
+footer .logo-footer{
+    max-width: 150px;
+}
+
+
+/* Sign In / Sign Up*/
+.blueline{
+    position: fixed;
+    background-color: #06b9f1;
+    height: 5px;
+    width: 100%;
+}
+.signin-wrapper{
+    margin-top: 100px;
+}
+.logo-signin{
+    text-align: center;
+}
+.logo-signin img{
+    max-width: 150px;
+}
+.signinform{
+    width: 100%;
+}
+.signinform .submit-form , .signinform .submit-form p{
+    text-align: center;
+}
+
+/* APPLICATION */
+
+/* App index */
+body{
+    background-color: #f5f8fa;
+}
+.app .leftok , .app .rightok{
+    padding: 20px;
+}
+.app .leftok .profile{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #d7d7d7;
+}
+.app .rightok .content{
+    padding: 10px 20px 0 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #d7d7d7;
+}
+.leftok .identitas img{
+    max-width: 60px;
+    border-radius: 50%;
+}
+.leftok .identitas{
+    display: table;
+}
+.leftok .identitas span{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.leftok .status img{
+    max-width: 20px;
+    line-height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.leftok .status .penawaran , .leftok .status .pemesanan{
+    line-height: 30px;
+}
+.leftok .status{
+    padding-left: 20px;
+}
+.leftok .pesanbus a{
+    width: 100%;
+    border-radius: 10px;
+}
+.pesanbusFAB{
+    display: none;
+}
+
+
+/**********************************************
+        CUSTOMIZE FOR MOBILE VERSION 
+ **********************************************/
+@media screen and (max-width:600px) {
+    .pesanbusFAB{
+        display: inline;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    .leftok{
+        display: none;
+    }
+    .rightok{
+        padding: 0px;
+    }
+    .containerapp{
+        width: 100%;
+    }
+    .container .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .containerapp .rightok{
+        padding: 0;
+    }
+    .app .rightok .content{
+        border-radius: 0;
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    nav{
+        box-shadow: none;
+    }
+}
+
+/**********************************************
+                PAGE INDEX 
+ **********************************************/
+
+/*        CUSTOMIZE TABS        */
+.tabs .tab a{
+    color: #06b9f1;
+    text-transform: none;
+}
+.tabs .tab a:hover, .tabs .tab a:active{
+    color: #06b9f1;
+}
+input:not([type]).validate+label, input[type=text].validate+label, input[type=password].validate+label, input[type=email].validate+label, input[type=url].validate+label, input[type=time].validate+label, input[type=date].validate+label, input[type=datetime].validate+label, input[type=datetime-local].validate+label, input[type=tel].validate+label, input[type=number].validate+label, input[type=search].validate+label, textarea.materialize-textarea.validate+label{
+    width: auto;
+}
+.tabs .indicator {
+    background-color: #06b9f1;
+}
+/*      end of costumize tabs       */
+
+@media screen and (max-width:600px) {
+    .tabs{
+        position: fixed;
+        width: 100%;
+        top: 56px;
+        left: 0;
+    }
+    #onprogress , #completed{
+        margin-top: 38px;
+    }
+}
+
+/* tabs content */
+@media screen and (max-width:600px) {
+    #onprogress , #completed{
+        padding: 0;
+    }
+}
+.order-item{
+    padding-top: 5px;
+    border-bottom : 1px solid #eaeaea;
+    border-top : 1px solid #eaeaea;
+    margin-bottom: 10px;
+}
+.order-item-top{
+    margin-bottom: 0;
+}
+.direction-icon{
+    width: 15px;
+}
+.order-item-top .direction img, .order-item-top .direction p{
+    float: left;
+}
+.order-item-top .direction p{
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 15px;
+}
+.order-item-top .direction-information{
+    padding : 5px 0 0 0;
+}
+.order-item-top .direction-information .row{
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.direction .text{
+    font-size: 12px;
+}
+.order-item .status-img img{
+    border-radius: 50%;
+    padding: 5px;
+}
+.order-item-bottom{
+    background-color: #fafafa;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+}
+.order-item-bottom .date p{
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 15px;
+    font-size: 11px;
+}
+.order-item-bottom .date p.hari{
+    font-weight: bold;
+}
+.order-item-bottom .businfo-wrapper{
+    float: left;
+}
+.businfo img{
+    width: 30px;
+    float: right;
+}
+.businfo p{
+    line-height: 15px;
+    font-size: 12px;
+    float: right;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+}
+.content .content-wrapper{
+    margin-bottom: 0;
+}
+
+
+/**********************************************
+                PAGE PESAN BUS 
+ **********************************************/
+
+.content h4{
+    text-align: center;
+}
+.pemesananbus .row{
+    padding: 0 15px;
+}
+.input-field .input-note{
+    font-size: 12px;
+    margin-top: 0;
+    margin-left: 55px;
+}
+#detaildari{
+    margin-bottom: 5px;
+}
+.subtitle-form{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.pemesananbus .input-field{
+    margin-top: 0;
+}
+.pemesananbus .divider{
+    margin-bottom: 25px;
+    margin-top: 35px;
+}
+.submit-formpesan button{
+    width: 100%;
+    border-radius: 10px;
+}
+.tambahbus{
+    float: right;
+}
+.bus-pesanan-header .col{
+    padding-left: 0;
+    padding-right: 0;
+}
+.bus-pesanan-header .tambahbus{
+    border-radius: 10px;
+}
+.bus-item{
+    position: relative;
+}
+.bus-item a.deletebus{
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    font-size: 25px;
+    position: absolute;
+    display: block;
+    right: -15px;
+}
+.bus-list .divider{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.formpemesanan .pilihbus, .formpemesanan .pilihfasilitas{
+    margin-left: 50px;
+}
+.formpemesanan .pilihbus button, .formpemesanan .pilihfasilitas button{
+    border-radius: 10px;
+}
+.formpemesanan .jumlahdanbudget{
+    margin-top: 20px;
+}
+@media screen and (max-width:600px) {
+    .submit-formpesan{
+        width: 100%;
+        margin: 0;
+    }
+    .submit-formpesan button{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+.bus-pesanan-header .title p{
+    margin-top: 0;
+    line-height: 36px;
+}
+.pemesananbus .row .bus-pesanan-header{
+    padding: 0;
+}
+
+/* modal custom */
+.modal-content{
+    padding : 5px;
+}
+.modal-content .row{
+    margin-bottom: 10px;
+    padding: 0;
+}
+.modal-content p{
+    margin: 0;
+}
+.pilihbus button , .pilihfasilitas button{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+#modalfasilitas .formfasilitas p{
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+
+/**********************************************
+                PAGE DETAIL PEMESANAN 
+ **********************************************/
+.actionpemesanan a{
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-right: 7px;
+}
+.detailpemesanan .row{
+    padding: 0 15px;
+}
+.datapemesanan .divider{
+    margin-bottom: 20px;
+}
+.detailpemesanan .topbutton{
+    margin-bottom: 5px;
+}
+.datapemesanan .texttitle{
+    font-weight: bold;
+}
+.datapemesanan p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.minitext{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:992px) {
+    .actionpemesanan a{
+        border-radius: 10px;
+        font-size: 10px;
+        padding: 5px 10px;
+        height: 30px;
+        line-height: 20px;
+    }
+}
+
