@@ -1,12 +1,19 @@
 package com.okbus.app;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.converter.FormHttpMessageConverter;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -68,14 +75,17 @@ public class HomeController {
 			user.setPassword(newUser.getPassword());
 			user.setPhoneNumber(newUser.getPhoneNumber());
 			
-			RestTemplate restTemplate = new RestTemplate();
-			restTemplate.getMessageConverters().add(new MappingJacksonHttpMessageConverter());
-			restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
+			MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
+			map.add("name", newUser.getName());
+			map.add("email", newUser.getEmail());
+			map.add("password", newUser.getPassword());
+			map.add("phoneNumber", newUser.getPhoneNumber());
 			
-			String jsonResponse = restTemplate.postForObject(url, user, String.class);
-			return "signin";
+			RestTemplate restTemplate = new RestTemplate();
+			String jsonResponse = restTemplate.postForObject(url, map, String.class);
+			return "redirect:signin";
 		} else {
-			return "signup";
+			return "redirect:signup";
 		}
 	}
 }
