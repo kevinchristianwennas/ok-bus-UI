@@ -17,7 +17,7 @@
         <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         
         <link rel="stylesheet" type="text/css" href='<c:url value="/resources/css/okbus.css"/>'>
-
+		
         <title>Ok-Bus</title>
     </head>
 
