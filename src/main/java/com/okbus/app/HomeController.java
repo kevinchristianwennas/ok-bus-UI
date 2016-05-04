@@ -54,7 +54,7 @@ public class HomeController {
 		
 		User userFromAPI = mapper.readValue(jsonResponse, User.class);
 		if (userFromAPI.getPassword().equals(user.getPassword())) {
-			return "index";
+			return "redirect:dashboard";
 		} else {
 			return "signin";
 		}
@@ -87,6 +87,11 @@ public class HomeController {
 		} else {
 			return "redirect:signup";
 		}
+	}
+	
+	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
+	public String dashboard() {
+		return "app-pesanbus";
 	}
 }
 

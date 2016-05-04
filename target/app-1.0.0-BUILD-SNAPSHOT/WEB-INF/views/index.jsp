@@ -23,9 +23,9 @@
 
     <body>
         <ul id="dropdownmasuk" class="dropdown-content">
-            <li><a href="signup.html">Daftar</a></li>
+            <li><a href="signup">Daftar</a></li>
             <li class="divider"></li>
-            <li><a href="signin.html">Masuk</a></li>
+            <li><a href="signin">Masuk</a></li>
         </ul>
         <nav>
             <div class="nav-wrapper">
