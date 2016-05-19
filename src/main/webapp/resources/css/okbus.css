@@ -5,12 +5,19 @@ body{
     font-family: Titillium;
 }
 /* OKBUS CSS*/
-h3{
+.main-text h3{
     font-size : 34px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
+.home h3{
+    font-size : 34px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
 .blueok{
     background-color: #06b9f1;
 }
@@ -26,14 +33,17 @@ h5{
     padding-bottom: 50px;
     padding-top: 50px;
 }
-.home .main{
-    height: 450px;
+.main{
+    width: 100%;
+    height: 500px;
     text-align: center;
-    display: table;
+    background: url('../img/main-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
 }
-.home .main .main-text{
-    display: table-cell;
-    vertical-align: middle;
+.main .main-text{
+    margin-top: 100px;
 }
 .section h3{
     text-align: center;
@@ -67,7 +77,10 @@ footer.page-footer{
 footer .logo-footer{
     max-width: 150px;
 }
-
+.divider-home{
+    width: 100%;
+    border-bottom: 1px solid #b7b7b7;
+}
 
 /* Sign In / Sign Up*/
 .blueline{
@@ -136,12 +149,21 @@ body{
 .leftok .status .penawaran , .leftok .status .pemesanan{
     line-height: 30px;
 }
-.leftok .status{
-    padding-left: 20px;
+.leftok .profile .col{
+
 }
 .leftok .pesanbus a{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 2px;
+}
+.leftok .pesanbus{
+    margin-bottom: 5px;
+}
+.leftok .pesanbus .col{
+    padding: 0;
+}
+.leftok .status .col{
+    padding: 0 5px;
 }
 .pesanbusFAB{
     display: none;
@@ -262,6 +284,10 @@ input:not([type]).validate+label, input[type=text].validate+label, input[type=pa
     padding-top: 7px;
     padding-bottom: 5px;
     margin-bottom: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
 }
 .order-item-bottom .date p{
     margin-top: 0;
@@ -289,7 +315,12 @@ input:not([type]).validate+label, input[type=text].validate+label, input[type=pa
 .content .content-wrapper{
     margin-bottom: 0;
 }
-
+.order-item a:active, .order-item a:visited {
+    color: #222;
+}
+.order-item a:hover{
+    color: #06b9f1;
+}
 
 /**********************************************
                 PAGE PESAN BUS 
@@ -321,9 +352,9 @@ input:not([type]).validate+label, input[type=text].validate+label, input[type=pa
     margin-bottom: 25px;
     margin-top: 35px;
 }
-.submit-formpesan button{
+.submit-formpesan a{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 .tambahbus{
     float: right;
@@ -333,12 +364,12 @@ input:not([type]).validate+label, input[type=text].validate+label, input[type=pa
     padding-right: 0;
 }
 .bus-pesanan-header .tambahbus{
-    border-radius: 10px;
+    border-radius: 2px;
 }
 .bus-item{
     position: relative;
 }
-.bus-item a.deletebus{
+.bus-item span.deletebus{
     -ms-transform: rotate(45deg); /* IE 9 */
     -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
     transform: rotate(45deg);
@@ -355,7 +386,7 @@ input:not([type]).validate+label, input[type=text].validate+label, input[type=pa
     margin-left: 50px;
 }
 .formpemesanan .pilihbus button, .formpemesanan .pilihfasilitas button{
-    border-radius: 10px;
+    border-radius: 2px;
 }
 .formpemesanan .jumlahdanbudget{
     margin-top: 20px;
@@ -374,7 +405,6 @@ input:not([type]).validate+label, input[type=text].validate+label, input[type=pa
         margin: 0;
         padding: 0;
     }
-
 }
 .bus-pesanan-header .title p{
     margin-top: 0;
@@ -412,23 +442,42 @@ input:not([type]).validate+label, input[type=text].validate+label, input[type=pa
                 PAGE DETAIL PEMESANAN 
  **********************************************/
 .actionpemesanan a{
-    border-radius: 10px;
-    padding: 0 10px;
+    border-radius: 2px;
+    padding: 0 25px;
     margin-right: 7px;
 }
-.detailpemesanan .row{
-    padding: 0 15px;
+.actionpemesanan .buttoncancel{
+    background-color: #fff;
+    color: #06b9f1;
+    border : 1px solid #06b9f1;
 }
-.datapemesanan .divider{
+.detailpemesanan .row ,.detailpenawaran .row, .detail-pembayaran .row{
+    padding: 0 10px;
+}
+.detailpemesanan h4, .detailpenawaran h4, .detail-pembayaran h4{
+    margin-bottom: 30px;
+}
+.datapemesanan .divider, .datapenawaran .divider{
     margin-bottom: 20px;
 }
 .detailpemesanan .topbutton{
     margin-bottom: 5px;
 }
-.datapemesanan .texttitle{
+.detailpemesanan .status-label p{
+    margin: 0;
+    padding: 0 20px;
+    border-radius: 12.5px;
+    line-height: 25px;
+    border: 1px solid #06b9f1;
+    color: #06b9f1;
+}
+.detailpemesanan .actionpemesanan a{
+    text-transform: none;
+}
+.datapemesanan .texttitle , .datapenawaran .texttitle , .datapembayaran .texttitle{
     font-weight: bold;
 }
-.datapemesanan p{
+.datapemesanan p ,.datapenawaran p{
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -436,14 +485,83 @@ input:not([type]).validate+label, input[type=text].validate+label, input[type=pa
     font-size: 12px;
     font-weight: bold;
 }
+.keterangan-item .keterangan-title{
+    font-weight: bold;
+    font-size: 11px;
+}
 
 @media screen and (max-width:992px) {
     .actionpemesanan a{
-        border-radius: 10px;
-        font-size: 10px;
+        border-radius: 2px;
+        font-size: 14px;
         padding: 5px 10px;
-        height: 30px;
-        line-height: 20px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .keterangan-item{
+        padding: 0;
     }
 }
 
+
+/**********************************************
+            PAGE DAFTAR PENAWARAN
+ **********************************************/
+.daftarpenawaran .daftarpenawaran-header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.list-penawaran a, .list-penawaran a:active{
+    color: #222;
+}
+.list-penawaran .penawaran-item{
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 10px;
+}
+.content .nopemesanan, .content .buttonpenawaran{
+    text-align: center;
+}
+.content .buttonpenawaran a{
+    text-transform: none;
+    border-radius: 2px;
+}
+.content .buttonpenawaran{
+    margin-bottom: 20px;
+}
+.content .nopemesanan{
+    margin-bottom: 10px;
+}
+@media screen and (max-width:600px) {
+    .detailpenawaran .buttonpenawaran{
+        width: 100%;
+        margin: 0;
+    }
+    .detailpenawaran .buttonpenawaran a{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        height: 54px;
+        line-height: 54px;
+        text-transform: uppercase;
+    }
+    .detailpenawaran h4{
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+}
+
+/* Pembayaran */
+.rekening .rekening-detail{
+    margin: 30px 0;
+}
+.rekening .rekening-detail p{
+    line-height: 10px;
+    margin: 10px;
+}
+.datapembayaran .kontak p{
+    margin: 5px;
+}
