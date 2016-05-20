@@ -46,17 +46,21 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(@ModelAttribute("app-1.0.0-BUILD-SNAPSHOT")User user) throws JsonParseException, JsonMappingException, IOException {
-		String url = "http://localhost:8080/api-0.0.1-SNAPSHOT/user?email=" + user.getEmail();
-		RestTemplate restTemplate = new RestTemplate();
-		String jsonResponse = restTemplate.getForObject(url, String.class);
-		ObjectMapper mapper = new ObjectMapper();
-		
-		User userFromAPI = mapper.readValue(jsonResponse, User.class);
-		if (userFromAPI.getPassword().equals(user.getPassword())) {
-			return "redirect:dashboard";
+	public String login(@ModelAttribute("ok-bus-api")User user) throws JsonParseException, JsonMappingException, IOException {
+		if (user.getEmail().isEmpty() || user.getPassword().isEmpty()) {
+			return "redirect:signin";
 		} else {
-			return "signin";
+			String url = "http://kchoam.cloudapp.net:8080/ok-bus-api/user?email=" + user.getEmail();
+			RestTemplate restTemplate = new RestTemplate();
+			String jsonResponse = restTemplate.getForObject(url, String.class);
+			ObjectMapper mapper = new ObjectMapper();
+			
+			User userFromAPI = mapper.readValue(jsonResponse, User.class);
+			if (userFromAPI.getPassword().equals(user.getPassword())) {
+				return "redirect:dashboard";
+			} else {
+				return "redirect:signin";
+			}
 		}
 	}
 	
@@ -66,8 +70,12 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
-	public String signingUp(@ModelAttribute("app-1.0.0-BUILD-SNAPSHOT")NewUser newUser) {
-		String url = "http://localhost:8080/api-0.0.1-SNAPSHOT/user";
+	public String signingUp(@ModelAttribute("ok-bus-api")NewUser newUser) {
+		if (newUser.getEmail().isEmpty() || newUser.getName().isEmpty() || newUser.getPassword().isEmpty() || 
+				newUser.getPhoneNumber().isEmpty() || newUser.getConfirmPassword().isEmpty()) {
+			return "redirect:signup";
+		}
+		String url = "http://kchoam.cloudapp.net:8080/ok-bus-api/user";
 		if (newUser.getPassword().equals(newUser.getConfirmPassword())) {
 			User user = new User();
 			user.setEmail(newUser.getEmail());
