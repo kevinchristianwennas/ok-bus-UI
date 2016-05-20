@@ -99,19 +99,31 @@ public class HomeController {
 	
 	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
 	public String dashboard() {
+		return "app-index";
+	}
+	
+	@RequestMapping(value = "/pesan", method = RequestMethod.GET)
+	public String pesan() {
 		return "app-pesanbus";
 	}
+	
+	@RequestMapping(value = "/detailpemesanan", method = RequestMethod.GET)
+	public String detailpemesanan() {
+		return "app-detailpemesanan";
+	}
+	
+	@RequestMapping(value = "/penawaran", method = RequestMethod.GET)
+	public String penawaran() {
+		return "app-daftarpenawaran";
+	}
+	
+	@RequestMapping(value = "/detailpenawaran", method = RequestMethod.GET)
+	public String detailpenawaran() {
+		return "app-detailpenawaran";
+	}
+	
+	@RequestMapping(value = "/pembayaran", method = RequestMethod.GET)
+	public String pembayaran() {
+		return "app-pembayaran";
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
