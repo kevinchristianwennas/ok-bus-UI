@@ -5,7 +5,7 @@
                         <div class="col s12">
                             <div class="row identitas">
                                 <img src='<c:url value="/resources/img/Go.jpg"/>' class="responsive-img">
-                                <span>Gohan Parningotan</span>
+                                <span>${userName}</span>
                             </div>
 
                             <div class="row status">

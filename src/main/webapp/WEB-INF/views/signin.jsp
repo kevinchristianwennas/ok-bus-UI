@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -27,14 +28,14 @@
                       <div class="row">
                         <div class="input-field col s12">
                           <i class="material-icons prefix">perm_identity</i>
-                          <form:input id="last_name" type="text" class="validate" path="email"></form:input>
+                          <form:input id="last_name" type="text" class="validate" path="email" />
                           <form:label for="last_name" path="email">email</form:label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
                           <i class="material-icons prefix">vpn_key</i>
-                          <form:input id="last_name" type="password" class="validate" autocomplete="off" path="password"></form:input>
+                          <form:input id="last_name" type="password" class="validate" autocomplete="off" path="password" />
                           <form:label for="last_name" path="password">password</form:label>
                         </div>
                       </div>

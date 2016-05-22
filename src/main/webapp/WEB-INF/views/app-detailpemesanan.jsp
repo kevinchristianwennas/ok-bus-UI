@@ -39,7 +39,23 @@
                                 <div>
                                     <p class="texttitle">Status</p>
                                     <div class="status-label row">
-                                        <p class="left">paid</p>
+                                    <c:choose>
+										<c:when test="${demand.status == 0}">
+			                            	<p class="left">waiting</p>
+			                         	</c:when>
+			             				<c:when test="${demand.status == 1}">
+			                            	<p class="left">not paid</p>
+			                            </c:when>
+			                            <c:when test="${demand.status == 2}">
+			                            	<p class="left">paid</p>
+			                            </c:when>
+			                            <c:when test="${demand.status == 3}">
+			                            	<p class="left">cancelled</p>
+			                            </c:when>
+			                            <c:when test="${demand.status == 4}">
+			                            	<p class="left">completed</p>
+			                            </c:when>
+                                    </c:choose>
                                     </div>
                                 </div>
 
@@ -47,7 +63,14 @@
                                 
                                 <div>
                                     <p class="texttitle">Tipe</p>
-                                    <p>Pulang-pergi</p>
+                                    <c:choose>
+                                    	<c:when test="${demand.rentType == true}">
+                                    		<p>Pulang-pergi</p>
+                                    	</c:when>
+                                    	<c:when test="${demand.rentType == false}">
+                                    		<p>Sekali jalan</p>
+                                    	</c:when>
+                                    </c:choose>
                                 </div>
                                 
                                 <div class="divider"></div>
@@ -64,16 +87,13 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>Bus 50 seats</td>
-                                                    <td>1</td>
-                                                    <td>Rp1.000.000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Bus 35 seats</td>
-                                                    <td>2</td>
-                                                    <td>Rp1.200.000</td>
-                                                </tr>
+                                            	<c:forEach items="${demand.listOfBus}" var="demandBus">
+                                            		<tr>
+	                                                    <td>Bus ${demandBus.capacity} seats</td>
+	                                                    <td>${demandBus.amount}</td>
+	                                                    <td>Rp ${demandBus.budget}</td>
+	                                                </tr>
+                                            	</c:forEach>
                                             </tbody>
                                         </table>
                                     </div>
@@ -90,7 +110,7 @@
                                                 <p>Dari</p>
                                             </div>
                                             <div class="col s10">
-                                                <p>Jalan H. Misan No. 53 RT 09 RW 09 Pasir Gunung Selatan, Cimanggis, Depok</p>
+                                                <p>${demand.pickAddress}</p>
                                             </div>
                                             <div class="col s2 keterangan-title">
                                                 <p>Waktu</p>
@@ -105,7 +125,7 @@
                                                 <p>Ke</p>
                                             </div>
                                             <div class="col s10">
-                                                <p>Fakultas Ilmu Komputer UI, Depok</p>
+                                                <p>${demand.destinationAddress}</p>
                                             </div>
                                             <div class="col s2 keterangan-title">
                                                 <p>Waktu</p>
@@ -124,9 +144,9 @@
                                     <p class="texttitle">Fasilitas</p>
                                     <div class="row">
                                         <ol>
-                                            <li>AC</li>
-                                            <li>Stop kontak</li>
-                                            <li>TV</li>
+                                        	<c:forEach items="${demand.facilities}" var="facility">
+                                        		<li>${facility}</li>	
+                                        	</c:forEach>
                                         </ol>
                                     </div>
                                 </div>
@@ -136,7 +156,7 @@
                                 <div >
                                     <p class="texttitle">Kontak</p>
                                     <div class="row">
-                                        <p>083873099622</p>
+                                        <p>${demand.contact}</p>
                                     </div>
                                 </div>
 

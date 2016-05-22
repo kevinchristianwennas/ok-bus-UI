@@ -3,10 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.okbus</groupId>
-	<artifactId>app</artifactId>
+	<artifactId>ok-bus</artifactId>
 	<name>web</name>
 	<packaging>war</packaging>
-	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
 		<java-version>1.6</java-version>
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
@@ -161,4 +160,5 @@
             </plugin>
         </plugins>
     </build>
+    <version>app</version>
 </project>

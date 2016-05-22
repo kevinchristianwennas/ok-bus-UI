@@ -3,6 +3,7 @@ package com.okbus.app;
 import java.io.Serializable;
 
 public class User implements Serializable {
+	private int id;
 	private String name;
 	private String email;
 	private String password;
@@ -30,5 +31,11 @@ public class User implements Serializable {
 	}
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	} 	
 }
