@@ -82,8 +82,9 @@
 		                                    <a href="daftarpemesanan">
 		                                        <div class="order-item-bottom row">
 		                                            <div class="col s7 date">
-		                                                <p class="hari">${demand.departureDate.getDate()}</p>
-		                                                <p class="jam">${demand.departureDate.getTime()}</p>
+		                                            	<c:set var="indexBulan" value="${demand.departureDate.getMonth()}"/>
+		                                                <p class="hari">${demand.departureDate.getDate()} ${arrayBulan[indexBulan]} 20${demand.departureDate.getYear().toString().substring(1,3)}</p>
+		                                                <p class="jam">${demand.departureDate.getHours()} ${demand.departureDate.getMinutes()} ${demand.departureDate.getSeconds()}</p>
 		                                            </div>
 		                                            <div class="col s5 businfo">
 		                                                <p>10</p>
@@ -156,52 +157,6 @@
 									</c:if>
 								</c:forEach>
 
-                                <div class="row order-item">
-                                    <a href="detailpemesanan">
-                                        <!-- Direction Information -->
-                                        <div class="order-item-top row">
-                                            <div class="col m2 s3 status-img">
-                                                <img src='<c:url value="/resources/img/status-paid.png"/>' class="responsive-img" alt="">
-                                            </div>
-                                            <div class="col m9 s9 direction-information">
-                                                <div class="row">
-                                                    <div class="s12 direction">
-                                                        <div class="">
-                                                            <img src='<c:url value="/resources/img/dari-icon.png"/>' class="direction-icon" alt="">
-                                                        </div>
-                                                        <div class="col s11 text">
-                                                            <p>Jalan H. Misan No.53 </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="s12 direction">
-                                                        <div class="">
-                                                            <img src='<c:url value="/resources/img/ke-icon.png"/>' class="direction-icon" alt="">
-                                                        </div>
-                                                        <div class="col s11 text">
-                                                            <p>Fakultas Ilmu Komputer, UI </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-
-                                    <!-- Date & Bus Information -->
-                                    <a href="daftarpemesanan">
-                                        <div class="order-item-bottom row">
-                                            <div class="col s7 date">
-                                                <p class="hari">13 Maret 2016</p>
-                                                <p class="jam">10.05</p>
-                                            </div>
-                                            <div class="col s5 businfo">
-                                                <p>10</p>
-                                                <img src='<c:url value="/resources/img/bus-only.png"/>'>
-                                            </div>
-                                        </div>                      
-                                    </a>
-                                </div>
                             </div>
                             
                             

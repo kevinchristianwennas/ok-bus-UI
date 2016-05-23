@@ -170,6 +170,8 @@ public class HomeController {
 		 */
 		Demand[] listOfDemand = getDemandByUserId(userId);
 		model.addObject("listOfDemand", listOfDemand);
+		String[] arrBulan = {"Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","Novemver","Desember"};
+		model.addObject("arrayBulan", arrBulan);
 		return model;
 	}
 	
