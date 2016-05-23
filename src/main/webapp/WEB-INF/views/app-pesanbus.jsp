@@ -45,7 +45,7 @@
                                     <div class="input-field s12">
                                         <i class="material-icons prefix">location_on</i>
                                         <form:input id="lokasidari" type="text" class="validate" path="pickAddress"/>
-                                        <form:label for="lokasidari" path="pickAddress">Lokasi</form:label>
+                                        <label for="lokasidari">Lokasi</label>
                                     </div>
 
                                     <p class="subtitle-form">Waktu</p>
@@ -65,7 +65,7 @@
                                     <div class="input-field s12">
                                         <i class="material-icons prefix">location_on</i>
                                         <form:input id="lokasike" type="text" class="validate" path="destinationAddress"/>
-                                        <form:label for="lokasike" path="destinationAddress">Lokasi</form:label>
+                                        <label for="lokasike">Lokasi</label>
                                     </div>
 
                                     <p class="subtitle-form">Waktu</p>
@@ -93,28 +93,28 @@
                                     <div class="divider" id="divider1"></div>
                                     <div class="bus-item" id="bus-item1">
                                         <span class="deletebus" onclick="deletebus(1)">+</span>
-                                            <div class="input-field s12">
-                                                <!-- ketika dipilih keluar modal untuk memilih kategori bus -->
-                                                <i class="material-icons prefix">shopping_cart</i>
-                                                <input type="hidden" name="tipebus[]" id="tipebus1">
-                                                <div class="pilihbus">
-                                                    <p id="tipebus1-view">Tekan tombol pilih bus.</p>
-                                                    <button data-target="modalbus" class="btn modal-trigger blueok" onclick="buspilihaktif(1)">Pilih Bus</button>
-                                                </div>
-                                            </div>
-                                            <div class="jumlahdanbudget">
-                                                <div class="input-field s12">
-                                                    <i class="material-icons prefix">shopping_cart</i>
-                                                    <input type="number" class="validate" name="jumlahbus[]">
-                                                    <label>Jumlah Bus</label>
-                                                </div>
-                                                <div class="input-field s12">
-                                                    <i class="material-icons prefix">work</i>
-                                                    <input type="number" class="validate" name="budgetbus[]">
-                                                    <label>Budget</label>
-                                                </div>
-                                            </div>
-                                    </div>
+                                        <div class="input-field s12">
+                                        	<!-- ketika dipilih keluar modal untuk memilih kategori bus -->
+                                            <i class="material-icons prefix">shopping_cart</i>
+                                            <input type="hidden" name="tipebus[]" id="tipebus1">
+                                            <div class="pilihbus">
+                                            	<p id="tipebus1-view">Tekan tombol pilih bus.</p>
+                                                <button data-target="modalbus" class="btn modal-trigger blueok" onclick="buspilihaktif(1)">Pilih Bus</button>
+											</div>
+                                        </div>
+                                        <div class="jumlahdanbudget">
+	                                        <div class="input-field s12">
+	                                        	<i class="material-icons prefix">shopping_cart</i>
+	                                            <input type="number" class="validate" name="jumlahbus[]">
+	                                            <label>Jumlah Bus</label>
+	                                        </div>
+	                                        <div class="input-field s12">
+	                                        	<i class="material-icons prefix">work</i>
+	                                            <input type="number" class="validate" name="budgetbus[]">
+	                                            <label>Budget</label>
+	                                        </div>
+                                       	</div>
+                                    </div>  
                                 </div>
 
                                 <div class="divider"></div>
@@ -163,6 +163,7 @@
                                         <form:input id="kontak" type="number" class="validate" path="contact"/>
                                         <form:label for="lokasidari" path="contact">Kontak</form:label>
                                     </div>
+                                </div>
 								
                                 <div class="row submit-formpesan">
                                     <form:button class="btn waves-effect waves-light btn-large blueok" type="submit" name="action" href="dashboard">Pesan
@@ -176,7 +177,7 @@
         </div>
 
 
-                                                <!-- Modal Pilihan Bus -->
+                                                <!-- Modal Pilihan Bus
                                                 <div id="modalbus" class="modal">
                                                     <div class="modal-content">
                                                         <div class="row">
@@ -224,9 +225,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-		
+                                                </div>  -->
+                                                
+                                                
 		<%@include file="app-footer.jsp" %>
-		
     </body>
   </html>

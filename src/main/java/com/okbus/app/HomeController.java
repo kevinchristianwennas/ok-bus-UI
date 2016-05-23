@@ -170,6 +170,7 @@ public class HomeController {
 		 */
 		Demand[] listOfDemand = getDemandByUserId(userId);
 		model.addObject("listOfDemand", listOfDemand);
+		model.addObject("listOfDemand2", listOfDemand);
 		String[] arrBulan = {"Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","Novemver","Desember"};
 		model.addObject("arrayBulan", arrBulan);
 		return model;
@@ -236,6 +237,14 @@ public class HomeController {
 			
 			return model;
 		}
+	}
+	
+	@RequestMapping(value="/cancel/{demandId}", method = RequestMethod.GET)
+	public String cancelDemand(@PathVariable int demandId) {
+		String url = "http://kchoam.cloudapp.net:8080/api-ok-bus/demand?id="+demandId;
+		RestTemplate restTemplate = new RestTemplate();
+		restTemplate.delete(url);
+		return "redirect:../dashboard";
 	}
 	
 	@RequestMapping(value = "/penawaran", method = RequestMethod.GET)

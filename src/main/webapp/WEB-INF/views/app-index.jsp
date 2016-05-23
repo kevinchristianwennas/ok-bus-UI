@@ -99,7 +99,7 @@
                             <!-- TABS DATA FOR COMPLETED -->
                             <div id="completed" class="col s12">
 								
-								<c:forEach items="${listOfDemand}" var="demand">
+								<c:forEach items="${listOfDemand2}" var="demand">
 									<c:if test="${demand.status >= 3}">
 										<div class="row order-item">
 		                                    <a href="detailpemesanan">
@@ -156,10 +156,7 @@
 		                                </div>
 									</c:if>
 								</c:forEach>
-
                             </div>
-                            
-                            
                         </div>
                     </div>
                 </div>
