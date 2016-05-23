@@ -98,7 +98,7 @@
                             <!-- TABS DATA FOR COMPLETED -->
                             <div id="completed" class="col s12">
 								
-								<c:forEach items="${listOfDemand}" var="demand">
+								<c:forEach items="${listOfDemand2}" var="demand">
 									<c:if test="${demand.status >= 3}">
 										<div class="row order-item">
 		                                    <a href="detailpemesanan">
@@ -155,53 +155,6 @@
 		                                </div>
 									</c:if>
 								</c:forEach>
-
-                                <div class="row order-item">
-                                    <a href="detailpemesanan">
-                                        <!-- Direction Information -->
-                                        <div class="order-item-top row">
-                                            <div class="col m2 s3 status-img">
-                                                <img src='<c:url value="/resources/img/status-paid.png"/>' class="responsive-img" alt="">
-                                            </div>
-                                            <div class="col m9 s9 direction-information">
-                                                <div class="row">
-                                                    <div class="s12 direction">
-                                                        <div class="">
-                                                            <img src='<c:url value="/resources/img/dari-icon.png"/>' class="direction-icon" alt="">
-                                                        </div>
-                                                        <div class="col s11 text">
-                                                            <p>Jalan H. Misan No.53 </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="s12 direction">
-                                                        <div class="">
-                                                            <img src='<c:url value="/resources/img/ke-icon.png"/>' class="direction-icon" alt="">
-                                                        </div>
-                                                        <div class="col s11 text">
-                                                            <p>Fakultas Ilmu Komputer, UI </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-
-                                    <!-- Date & Bus Information -->
-                                    <a href="daftarpemesanan">
-                                        <div class="order-item-bottom row">
-                                            <div class="col s7 date">
-                                                <p class="hari">13 Maret 2016</p>
-                                                <p class="jam">10.05</p>
-                                            </div>
-                                            <div class="col s5 businfo">
-                                                <p>10</p>
-                                                <img src='<c:url value="/resources/img/bus-only.png"/>'>
-                                            </div>
-                                        </div>                      
-                                    </a>
-                                </div>
                             </div>
                             
                             

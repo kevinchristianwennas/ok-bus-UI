@@ -28,7 +28,7 @@
                             <div class="col s12 actionpemesanan">
                                 <a class="waves-effect waves-light blueok btn buttondaftarpenawaran col m4 offset-m3 s7 offset-s1" href="penawaran">
                                     10 Penawaran</a>
-                                <a class="waves-effect waves-light blueok btn buttoncancel col m2 s3" href="#">
+                                <a class="waves-effect waves-light blueok btn buttoncancel col m2 s3" href="../cancel/${demand.id}">
                                     Cancel</a>
                             </div>
                         </div>
